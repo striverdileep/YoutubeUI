@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {
   AppBar,
   Button,
@@ -17,6 +18,7 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
+  ListItemButton,
 } from "@mui/material";
 import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -27,6 +29,13 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import MicNoneIcon from "@mui/icons-material/MicNone";
 import HomeIcon from "@mui/icons-material/Home";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import ShortsLogo from "../assets/ShortsLogo.png";
+import HistoryIcon from "@mui/icons-material/History";
+import PlaylistPlayIcon from "@mui/icons-material/PlaylistPlay";
+import WatchLaterIcon from "@mui/icons-material/WatchLater";
+import ThumbUpIcon from "@mui/icons-material/ThumbUp";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import MovieIcon from "@mui/icons-material/Movie";
 const YouTubeHeader = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -37,23 +46,127 @@ const YouTubeHeader = () => {
           setOpen(false);
         }}
       >
-        <Box width="150px" padding={3} paddingTop={1}>
-          <List>
-            <ListItem>
-              <Button
-                color="inherit"
-                sx={{
-                  width: "150px",
-                }}
-              >
-                <ListItemIcon>
-                  <HomeIcon />
-                </ListItemIcon>
-                <ListItemText sx={{textAlign:"left"}}>Home</ListItemText>
-              </Button>
-            </ListItem>
-            <ListItem></ListItem>
+        <Box width="200px">
+          <List disablePadding>
+            <ListItemButton
+              sx={{
+                "&:hover": {
+                  backgroundColor: "rgba(222, 219, 219, 1)",
+                },
+              }}
+            >
+              <ListItemIcon>
+                <HomeIcon />
+              </ListItemIcon>
+              <ListItemText>Home</ListItemText>
+            </ListItemButton>
+            <ListItemButton
+              sx={{
+                "&:hover": {
+                  backgroundColor: "rgba(222, 219, 219, 1)",
+                },
+              }}
+            >
+              <ListItemIcon>
+                <PlayArrowIcon />
+              </ListItemIcon>
+              <ListItemText>Shorts</ListItemText>
+            </ListItemButton>
           </List>
+          <Divider orientation="horizontal" fullWidth />
+          <Typography variant="body1" p={2}>
+            Subscriptions
+          </Typography>
+          <ListItemButton
+            sx={{
+              "&:hover": {
+                backgroundColor: "rgba(222, 219, 219, 1)",
+              },
+            }}
+          >
+            <ListItemIcon>
+              <Avatar src="https://yt3.googleusercontent.com/ytc/AIdro_md2CfeGP7cDguRmrpRdM3a1r_gOniMzennD6141VLFw70=s160-c-k-c0x00ffffff-no-rj"></Avatar>
+            </ListItemIcon>
+            <ListItemText>Akshay Saini</ListItemText>
+          </ListItemButton>
+          <ListItemButton
+            sx={{
+              "&:hover": {
+                backgroundColor: "rgba(222, 219, 219, 1)",
+              },
+            }}
+          >
+            <ListItemIcon>
+              <Avatar src="https://yt3.googleusercontent.com/dSkEwiYrGlZPE6t9irfN8RlpDlaU_n7u3oEnHxJIY_knycUXPzEVlFKbYtwzkcysNDVZPn5zmHg=s160-c-k-c0x00ffffff-no-rj"></Avatar>
+            </ListItemIcon>
+            <ListItemText>Take U Forward</ListItemText>
+          </ListItemButton>
+          <ListItemButton
+            sx={{
+              "&:hover": {
+                backgroundColor: "rgba(222, 219, 219, 1)",
+              },
+            }}
+          >
+            <ListItemIcon>
+              <Avatar src="https://yt3.googleusercontent.com/CZz3YkQI3pkX-F9yoNrKG1KDWWtcas4jXPcZ98ldQx6T-dGdo1t30kKKXHpZ4k4tjfEY4pskoQ=s160-c-k-c0x00ffffff-no-rj"></Avatar>
+            </ListItemIcon>
+            <ListItemText>Codevolution</ListItemText>
+          </ListItemButton>
+          <Divider orientation="horizontal"></Divider>
+          <Typography variant="body1" p={2}>
+            You
+          </Typography>
+          <ListItemButton
+            sx={{
+              "&:hover": {
+                backgroundColor: "rgba(222, 219, 219, 1)",
+              },
+            }}
+          >
+            <ListItemIcon>
+              <HistoryIcon></HistoryIcon>
+            </ListItemIcon>
+            <ListItemText>History</ListItemText>
+          </ListItemButton>
+          <ListItemButton
+            sx={{
+              "&:hover": {
+                backgroundColor: "rgba(222, 219, 219, 1)",
+              },
+            }}
+          >
+            <ListItemIcon>
+              <PlaylistPlayIcon />
+            </ListItemIcon>
+            <ListItemText>Playlists</ListItemText>
+          </ListItemButton>
+          <ListItemButton
+            sx={{
+              "&:hover": {
+                backgroundColor: "rgba(222, 219, 219, 1)",
+              },
+            }}
+          >
+            <ListItemIcon>
+              <WatchLaterIcon />
+            </ListItemIcon>
+            <ListItemText>Watch Later</ListItemText>
+          </ListItemButton>
+          <ListItemButton>
+            <ListItemIcon>
+              <ThumbUpIcon />
+            </ListItemIcon>
+            <ListItemText>Liked Videos</ListItemText>
+          </ListItemButton>
+          <Divider orientation="horizontal"></Divider>
+          <Typography variant="body1" p={2}>
+            Explore
+          </Typography>
+          <ListItemButton></ListItemButton>
+          <ListItemButton></ListItemButton>
+          <ListItemButton></ListItemButton>
+          <ListItemButton></ListItemButton>
         </Box>
       </Drawer>
       <AppBar
@@ -133,7 +246,7 @@ const YouTubeHeader = () => {
           </IconButton>
           <IconButton>
             <Badge badgeContent={5} color="primary">
-              <NotificationsIcon fontSize="large" />
+              <NotificationsIcon fontSize="large" overlap="circular"/>
             </Badge>
           </IconButton>
           <IconButton>
@@ -141,6 +254,7 @@ const YouTubeHeader = () => {
           </IconButton>
         </Toolbar>
       </AppBar>
+      
     </div>
   );
 };
