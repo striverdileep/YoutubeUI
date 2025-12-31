@@ -188,7 +188,7 @@ const YouTubeHeader = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Button href="/">
+          <Button href="/" sx={{padding:"20px"}}>
             <img src={YouTubeLogo} />
           </Button>
           <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
@@ -223,14 +223,17 @@ const YouTubeHeader = () => {
               flexGrow: 1,
             }}
           ></Box>
-          <SearchIcon
-            sx={{
-              display: {
-                xs: "block",
-                sm: "none",
-              },
-            }}
-          />
+          <IconButton>
+            <SearchIcon
+              sx={{
+                display: {
+                  xs: "block",
+                  sm: "none",
+                  alignSelf: "center",
+                },
+              }}
+            />
+          </IconButton>
           <Tooltip title="Search with your Voice">
             <IconButton
               size="large"
