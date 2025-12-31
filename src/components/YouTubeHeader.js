@@ -38,6 +38,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import MovieIcon from "@mui/icons-material/Movie";
 const YouTubeHeader = () => {
   const [open, setOpen] = useState(false);
+  
   return (
     <div>
       <Drawer
@@ -190,7 +191,7 @@ const YouTubeHeader = () => {
           <Button href="/">
             <img src={YouTubeLogo} />
           </Button>
-          <Box sx={{ flexGrow: 1 }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
             <TextField
               fullWidth
               size="small"
@@ -213,6 +214,23 @@ const YouTubeHeader = () => {
               }}
             />
           </Box>
+          <Box
+            sx={{
+              display: {
+                xs: "block",
+                sm: "none",
+              },
+              flexGrow: 1,
+            }}
+          ></Box>
+          <SearchIcon
+            sx={{
+              display: {
+                xs: "block",
+                sm: "none",
+              },
+            }}
+          />
           <Tooltip title="Search with your Voice">
             <IconButton
               size="large"
@@ -240,13 +258,19 @@ const YouTubeHeader = () => {
               color="rgba(0, 0, 0, 1)"
               fontSize="small"
               fontStyle="bold"
+              sx={{
+                display: {
+                  xs: "none",
+                  md: "block",
+                },
+              }}
             >
               Create
             </Typography>
           </IconButton>
-          <IconButton>
+          <IconButton sx={{ display: { xs: "none", sm: "block" } }}>
             <Badge badgeContent={5} color="primary">
-              <NotificationsIcon fontSize="large" overlap="circular"/>
+              <NotificationsIcon fontSize="large" overlap="circular" />
             </Badge>
           </IconButton>
           <IconButton>
@@ -254,7 +278,6 @@ const YouTubeHeader = () => {
           </IconButton>
         </Toolbar>
       </AppBar>
-      
     </div>
   );
 };

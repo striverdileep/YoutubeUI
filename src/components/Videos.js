@@ -7,23 +7,15 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import YouTubeLogo from "../assets/YoutubeLogo.png";
+import "./Videos.css"
 const Videos = () => {
   return (
     <div
       className="VideoFrames"
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        position: "relative",
-        top: "64px",
-        width: "100%",
-        height: "100%",
-        justifyContent: "center",
-      }}
     >
       <Card
         sx={{
-          maxWidth: 440,
+            maxWidth: "90%",
           border: "2px solid black",
           padding: "10px",
           margin: "30px",
@@ -49,7 +41,7 @@ const Videos = () => {
       </Card>
       <Card
         sx={{
-          maxWidth: 440,
+          maxWidth: "90%",
           border: "2px solid black",
           padding: "10px",
           margin: "30px",
@@ -75,7 +67,7 @@ const Videos = () => {
       </Card>
       <Card
         sx={{
-          maxWidth: 440,
+          maxWidth: "90%",
           border: "2px solid black",
           padding: "10px",
           margin: "30px",
@@ -101,7 +93,7 @@ const Videos = () => {
       </Card>
       <Card
         sx={{
-          maxWidth: 440,
+          maxWidth: "90%",
           border: "2px solid black",
           padding: "10px",
           margin: "30px",
@@ -127,7 +119,7 @@ const Videos = () => {
       </Card>
       <Card
         sx={{
-          maxWidth: 440,
+          maxWidth: "90%",
           border: "2px solid black",
           padding: "10px",
           margin: "30px",
@@ -153,7 +145,7 @@ const Videos = () => {
       </Card>
       <Card
         sx={{
-          maxWidth: 440,
+          maxWidth: "90%",
           border: "2px solid black",
           padding: "10px",
           margin: "30px",
@@ -179,7 +171,7 @@ const Videos = () => {
       </Card>
       <Card
         sx={{
-          maxWidth: 440,
+          maxWidth: "90%",
           border: "2px solid black",
           padding: "10px",
           margin: "30px",
@@ -205,7 +197,7 @@ const Videos = () => {
       </Card>
       <Card
         sx={{
-          maxWidth: 440,
+          maxWidth: "90%",
           border: "2px solid black",
           padding: "10px",
           margin: "30px",
@@ -231,7 +223,7 @@ const Videos = () => {
       </Card>
       <Card
         sx={{
-          maxWidth: 440,
+          maxWidth: "90%",
           border: "2px solid black",
           padding: "10px",
           margin: "30px",
@@ -257,7 +249,7 @@ const Videos = () => {
       </Card>
       <Card
         sx={{
-          maxWidth: 440,
+          maxWidth: "90%",
           border: "2px solid black",
           padding: "10px",
           margin: "30px",
@@ -283,7 +275,7 @@ const Videos = () => {
       </Card>
       <Card
         sx={{
-          maxWidth: 440,
+          maxWidth: "90%",
           border: "2px solid black",
           padding: "10px",
           margin: "30px",
@@ -309,7 +301,7 @@ const Videos = () => {
       </Card>
       <Card
         sx={{
-          maxWidth: 440,
+          maxWidth: "90%",
           border: "2px solid black",
           padding: "10px",
           margin: "30px",
